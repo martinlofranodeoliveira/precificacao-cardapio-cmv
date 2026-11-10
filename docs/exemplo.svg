@@ -1,0 +1,331 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" width="1440" height="900">
+  <defs>
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="card-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+
+  <!-- Fundo Principal -->
+  <rect width="1440" height="900" fill="url(#bg-grad)" />
+
+  <!-- Cabeçalho -->
+  <g transform="translate(50, 40)">
+    <text x="0" y="28" font-family="sans-serif" font-size="24" font-weight="800" fill="#f8fafc" letter-spacing="0.5">
+      LOFRANO TECNOLOGIA · ENGENHARIA DE CARDÁPIO &amp; CMV ALVO
+    </text>
+    <text x="0" y="52" font-family="sans-serif" font-size="13" font-weight="500" fill="#94a3b8">
+      Matriz Kasavana &amp; Smith (Miller) · Custos em Centavos Inteiros e Frações Racionais Exatas (Zero Float)
+    </text>
+    <g transform="translate(980, 0)">
+      <rect x="0" y="8" width="360" height="42" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+      <text x="180" y="26" font-family="sans-serif" font-size="11" font-weight="600" text-anchor="middle" fill="#38bdf8">
+        Bistrô &amp; Trattoria Lofrano
+      </text>
+      <text x="180" y="42" font-family="sans-serif" font-size="11" text-anchor="middle" fill="#94a3b8">
+        Período: Outubro/2026 · 10/11/2026
+      </text>
+    </g>
+  </g>
+
+  <!-- 4 Cards de Indicadores (KPIs) -->
+  <g transform="translate(50, 115)">
+    <!-- Card 1: Faturamento -->
+    <g transform="translate(0, 0)">
+      <rect width="310" height="68" rx="8" fill="url(#card-grad)" stroke="#334155" stroke-width="1" />
+      <text x="18" y="24" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">FATURAMENTO TOTAL</text>
+      <text x="18" y="52" font-family="sans-serif" font-size="20" font-weight="800" fill="#38bdf8">R$ 112910,00</text>
+    </g>
+    <!-- Card 2: CMV Global -->
+    <g transform="translate(340, 0)">
+      <rect width="310" height="68" rx="8" fill="url(#card-grad)" stroke="#334155" stroke-width="1" />
+      <text x="18" y="24" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">CMV MÉDIO PONDERADO</text>
+      <text x="18" y="52" font-family="sans-serif" font-size="20" font-weight="800" fill="#f59e0b">26% <tspan font-size="12" font-weight="500" fill="#94a3b8">(R$ 29923,20)</tspan></text>
+    </g>
+    <!-- Card 3: Margem Contribuição -->
+    <g transform="translate(680, 0)">
+      <rect width="310" height="68" rx="8" fill="url(#card-grad)" stroke="#334155" stroke-width="1" />
+      <text x="18" y="24" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">MARGEM CONTRIBUIÇÃO TOTAL</text>
+      <text x="18" y="52" font-family="sans-serif" font-size="20" font-weight="800" fill="#10b981">R$ 69437,60</text>
+    </g>
+    <!-- Card 4: Matriz Quadrantes -->
+    <g transform="translate(1020, 0)">
+      <rect width="320" height="68" rx="8" fill="url(#card-grad)" stroke="#334155" stroke-width="1" />
+      <text x="18" y="24" font-family="sans-serif" font-size="11" font-weight="600" fill="#94a3b8">DISTRIBUIÇÃO MATRIZ</text>
+      <text x="18" y="52" font-family="sans-serif" font-size="13" font-weight="700" fill="#f8fafc">
+        ⭐ 3  🐴 2  🧩 2  🐕 1
+      </text>
+    </g>
+  </g>
+
+  <!-- Área do Gráfico Scatter Plot -->
+  <g transform="translate(0, 0)">
+    <!-- Fundo do Gráfico -->
+    <rect x="50" y="200" width="820" height="530" rx="8" fill="#0b1120" stroke="#1e293b" stroke-width="1.5" />
+
+    <!-- 4 Áreas de Fundo de Quadrantes -->
+    <!-- Superior Esquerdo: QUEBRA-CABEÇA -->
+    <rect x="50" y="200" width="252.30769230769232" height="221.19215824796896" fill="#78350f" fill-opacity="0.08" />
+    <text x="70" y="230" font-family="sans-serif" font-size="13" font-weight="800" fill="#fbbf24" fill-opacity="0.6">
+      🧩 QUEBRA-CABEÇA (Alta Margem, Baixa Venda)
+    </text>
+
+    <!-- Superior Direito: ESTRELA -->
+    <rect x="302.3076923076923" y="200" width="567.6923076923076" height="221.19215824796896" fill="#064e3b" fill-opacity="0.08" />
+    <text x="850" y="230" font-family="sans-serif" font-size="13" font-weight="800" text-anchor="end" fill="#10b981" fill-opacity="0.8">
+      ⭐ ESTRELA (Alta Margem, Alta Venda)
+    </text>
+
+    <!-- Inferior Esquerdo: CÃO -->
+    <rect x="50" y="421.19215824796896" width="252.30769230769232" height="308.80784175203104" fill="#7f1d1d" fill-opacity="0.08" />
+    <text x="70" y="710" font-family="sans-serif" font-size="13" font-weight="800" fill="#f87171" fill-opacity="0.6">
+      🐕 CÃO / ABACAXI (Baixa Margem, Baixa Venda)
+    </text>
+
+    <!-- Inferior Direito: BURRO DE CARGA -->
+    <rect x="302.3076923076923" y="421.19215824796896" width="567.6923076923076" height="308.80784175203104" fill="#0c4a6e" fill-opacity="0.08" />
+    <text x="850" y="710" font-family="sans-serif" font-size="13" font-weight="800" text-anchor="end" fill="#38bdf8" fill-opacity="0.8">
+      🐴 BURRO DE CARGA (Baixa Margem, Alta Venda)
+    </text>
+
+    <!-- Linhas Divisórias Tracejadas -->
+    <line x1="302.3076923076923" y1="200" x2="302.3076923076923" y2="730" stroke="#475569" stroke-width="1.5" stroke-dasharray="6,4" />
+    <line x1="50" y1="421.19215824796896" x2="870" y2="421.19215824796896" stroke="#475569" stroke-width="1.5" stroke-dasharray="6,4" />
+
+    <!-- Rótulos dos Eixos -->
+    <text x="460" y="762" font-family="sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#94a3b8">
+      POPULARIDADE (VOLUME DE VENDAS NO PERÍODO) →
+    </text>
+    <text transform="rotate(-90)" x="-465" y="32" font-family="sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#94a3b8">
+      MARGEM DE CONTRIBUIÇÃO UNITÁRIA (R$) →
+    </text>
+
+    <!-- Pontos do Cardápio -->
+    
+          <g class="ponto-item">
+            <circle cx="763.0" cy="673.0" r="11" fill="#38bdf8" fill-opacity="0.25" stroke="#38bdf8" stroke-width="2.5" />
+            <circle cx="763.0" cy="673.0" r="4" fill="#38bdf8" />
+            <text x="777.0" y="677.0" font-family="sans-serif" font-size="11" font-weight="600" fill="#f8fafc">
+              PRAT-ESPRESSO-DOSE
+            </text>
+            <title>Café Espresso Especial (PRAT-ESPRESSO-DOSE)&#10;Vendas: 520 un&#10;Preço: R$ 9,00&#10;Margem: R$ 6,09&#10;Quadrante: BURRO_DE_CARGA</title>
+          </g>
+        
+          <g class="ponto-item">
+            <circle cx="132.3" cy="623.0" r="11" fill="#f87171" fill-opacity="0.25" stroke="#f87171" stroke-width="2.5" />
+            <circle cx="132.3" cy="623.0" r="4" fill="#f87171" />
+            <text x="146.3" y="627.0" font-family="sans-serif" font-size="11" font-weight="600" fill="#f8fafc">
+              PRAT-BRUSCHETTA-TOMATE
+            </text>
+            <title>Bruschetta Tradicional de Tomate (PRAT-BRUSCHETTA-TOMATE)&#10;Vendas: 60 un&#10;Preço: R$ 24,00&#10;Margem: R$ 11,43&#10;Quadrante: CAO</title>
+          </g>
+        
+          <g class="ponto-item">
+            <circle cx="166.6" cy="344.2" r="11" fill="#fbbf24" fill-opacity="0.25" stroke="#fbbf24" stroke-width="2.5" />
+            <circle cx="166.6" cy="344.2" r="4" fill="#fbbf24" />
+            <text x="180.6" y="348.2" font-family="sans-serif" font-size="11" font-weight="600" fill="#f8fafc">
+              PRAT-POLENTA-TRUFADA
+            </text>
+            <title>Polenta Cremosa Trufada (PRAT-POLENTA-TRUFADA)&#10;Vendas: 85 un&#10;Preço: R$ 58,00&#10;Margem: R$ 41,22&#10;Quadrante: QUEBRA_CABECA</title>
+          </g>
+        
+          <g class="ponto-item">
+            <circle cx="447.7" cy="357.9" r="11" fill="#10b981" fill-opacity="0.25" stroke="#10b981" stroke-width="2.5" />
+            <circle cx="447.7" cy="357.9" r="4" fill="#10b981" />
+            <text x="461.7" y="361.9" font-family="sans-serif" font-size="11" font-weight="600" fill="#f8fafc">
+              PRAT-MASSA-TRUFA
+            </text>
+            <title>Tagliolini na Manteiga Trufada (PRAT-MASSA-TRUFA)&#10;Vendas: 290 un&#10;Preço: R$ 62,00&#10;Margem: R$ 39,75&#10;Quadrante: ESTRELA</title>
+          </g>
+        
+          <g class="ponto-item">
+            <circle cx="612.2" cy="200.0" r="11" fill="#10b981" fill-opacity="0.25" stroke="#10b981" stroke-width="2.5" />
+            <circle cx="612.2" cy="200.0" r="4" fill="#10b981" />
+            <text x="626.2" y="204.0" font-family="sans-serif" font-size="11" font-weight="600" fill="#f8fafc">
+              PRAT-MIGNON-MOLHO
+            </text>
+            <title>Medalhão de Mignon ao Poivre (PRAT-MIGNON-MOLHO)&#10;Vendas: 410 un&#10;Preço: R$ 92,00&#10;Margem: R$ 56,62&#10;Quadrante: ESTRELA</title>
+          </g>
+        
+          <g class="ponto-item">
+            <circle cx="516.2" cy="294.5" r="11" fill="#10b981" fill-opacity="0.25" stroke="#10b981" stroke-width="2.5" />
+            <circle cx="516.2" cy="294.5" r="4" fill="#10b981" />
+            <text x="530.2" y="298.5" font-family="sans-serif" font-size="11" font-weight="600" fill="#f8fafc">
+              PRAT-RISOTO-COGUMELO
+            </text>
+            <title>Risoto de Cogumelos Trufado (PRAT-RISOTO-COGUMELO)&#10;Vendas: 340 un&#10;Preço: R$ 78,00&#10;Margem: R$ 46,52&#10;Quadrante: ESTRELA</title>
+          </g>
+        
+          <g class="ponto-item">
+            <circle cx="214.5" cy="267.8" r="11" fill="#fbbf24" fill-opacity="0.25" stroke="#fbbf24" stroke-width="2.5" />
+            <circle cx="214.5" cy="267.8" r="4" fill="#fbbf24" />
+            <text x="228.5" y="271.8" font-family="sans-serif" font-size="11" font-weight="600" fill="#f8fafc">
+              PRAT-SALMAO-GRELHADO
+            </text>
+            <title>Salmão com Crosta de Parmesão (PRAT-SALMAO-GRELHADO)&#10;Vendas: 120 un&#10;Preço: R$ 89,00&#10;Margem: R$ 49,38&#10;Quadrante: QUEBRA_CABECA</title>
+          </g>
+        
+          <g class="ponto-item">
+            <circle cx="433.9" cy="542.9" r="11" fill="#38bdf8" fill-opacity="0.25" stroke="#38bdf8" stroke-width="2.5" />
+            <circle cx="433.9" cy="542.9" r="4" fill="#38bdf8" />
+            <text x="447.9" y="546.9" font-family="sans-serif" font-size="11" font-weight="600" fill="#f8fafc">
+              PRAT-TIRAMISU
+            </text>
+            <title>Tiramisù Clássico Italiano (PRAT-TIRAMISU)&#10;Vendas: 280 un&#10;Preço: R$ 32,00&#10;Margem: R$ 19,99&#10;Quadrante: BURRO_DE_CARGA</title>
+          </g>
+        
+  </g>
+
+  <!-- Painel Lateral: Tabela de Itens e Decisões -->
+  <g transform="translate(0, 0)">
+    <rect x="890" y="200" width="500" height="530" rx="8" fill="#0b1120" stroke="#1e293b" stroke-width="1.5" />
+    <text x="910" y="234" font-family="sans-serif" font-size="14" font-weight="800" fill="#f8fafc">
+      CLASSIFICAÇÃO OPERACIONAL E PREÇOS
+    </text>
+    <text x="910" y="252" font-family="sans-serif" font-size="11" fill="#64748b">
+      Ranking de itens, margem de contribuição e ações imediatas
+    </text>
+    
+          <g transform="translate(900, 260)">
+            <rect x="0" y="0" width="490" height="38" rx="6" fill="#1e293b" fill-opacity="0.6" stroke="#334155" stroke-width="1" />
+            <rect x="0" y="0" width="4" height="38" rx="2" fill="#38bdf8" />
+            <text x="14" y="24" font-family="sans-serif" font-size="12" font-weight="700" fill="#f1f5f9">
+              PRAT-ESPRESSO-DOSE · Café Espresso Especial
+            </text>
+            <text x="260" y="24" font-family="sans-serif" font-size="11" fill="#94a3b8">
+              520 un | R$ 9,00
+            </text>
+            <rect x="390" y="9" width="90" height="20" rx="4" fill="#38bdf8" fill-opacity="0.18" stroke="#38bdf8" stroke-width="1" />
+            <text x="435" y="23" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle" fill="#38bdf8">
+              BURRO_DE_C
+            </text>
+          </g>
+        
+          <g transform="translate(900, 305)">
+            <rect x="0" y="0" width="490" height="38" rx="6" fill="#1e293b" fill-opacity="0.6" stroke="#334155" stroke-width="1" />
+            <rect x="0" y="0" width="4" height="38" rx="2" fill="#f87171" />
+            <text x="14" y="24" font-family="sans-serif" font-size="12" font-weight="700" fill="#f1f5f9">
+              PRAT-BRUSCHETTA-TOMATE · Bruschetta Tradicional
+            </text>
+            <text x="260" y="24" font-family="sans-serif" font-size="11" fill="#94a3b8">
+              60 un | R$ 24,00
+            </text>
+            <rect x="390" y="9" width="90" height="20" rx="4" fill="#f87171" fill-opacity="0.18" stroke="#f87171" stroke-width="1" />
+            <text x="435" y="23" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle" fill="#f87171">
+              CAO
+            </text>
+          </g>
+        
+          <g transform="translate(900, 350)">
+            <rect x="0" y="0" width="490" height="38" rx="6" fill="#1e293b" fill-opacity="0.6" stroke="#334155" stroke-width="1" />
+            <rect x="0" y="0" width="4" height="38" rx="2" fill="#fbbf24" />
+            <text x="14" y="24" font-family="sans-serif" font-size="12" font-weight="700" fill="#f1f5f9">
+              PRAT-POLENTA-TRUFADA · Polenta Cremosa Trufad
+            </text>
+            <text x="260" y="24" font-family="sans-serif" font-size="11" fill="#94a3b8">
+              85 un | R$ 58,00
+            </text>
+            <rect x="390" y="9" width="90" height="20" rx="4" fill="#fbbf24" fill-opacity="0.18" stroke="#fbbf24" stroke-width="1" />
+            <text x="435" y="23" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle" fill="#fbbf24">
+              QUEBRA_CAB
+            </text>
+          </g>
+        
+          <g transform="translate(900, 395)">
+            <rect x="0" y="0" width="490" height="38" rx="6" fill="#1e293b" fill-opacity="0.6" stroke="#334155" stroke-width="1" />
+            <rect x="0" y="0" width="4" height="38" rx="2" fill="#10b981" />
+            <text x="14" y="24" font-family="sans-serif" font-size="12" font-weight="700" fill="#f1f5f9">
+              PRAT-MASSA-TRUFA · Tagliolini na Manteiga
+            </text>
+            <text x="260" y="24" font-family="sans-serif" font-size="11" fill="#94a3b8">
+              290 un | R$ 62,00
+            </text>
+            <rect x="390" y="9" width="90" height="20" rx="4" fill="#10b981" fill-opacity="0.18" stroke="#10b981" stroke-width="1" />
+            <text x="435" y="23" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle" fill="#10b981">
+              ESTRELA
+            </text>
+          </g>
+        
+          <g transform="translate(900, 440)">
+            <rect x="0" y="0" width="490" height="38" rx="6" fill="#1e293b" fill-opacity="0.6" stroke="#334155" stroke-width="1" />
+            <rect x="0" y="0" width="4" height="38" rx="2" fill="#10b981" />
+            <text x="14" y="24" font-family="sans-serif" font-size="12" font-weight="700" fill="#f1f5f9">
+              PRAT-MIGNON-MOLHO · Medalhão de Mignon ao 
+            </text>
+            <text x="260" y="24" font-family="sans-serif" font-size="11" fill="#94a3b8">
+              410 un | R$ 92,00
+            </text>
+            <rect x="390" y="9" width="90" height="20" rx="4" fill="#10b981" fill-opacity="0.18" stroke="#10b981" stroke-width="1" />
+            <text x="435" y="23" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle" fill="#10b981">
+              ESTRELA
+            </text>
+          </g>
+        
+          <g transform="translate(900, 485)">
+            <rect x="0" y="0" width="490" height="38" rx="6" fill="#1e293b" fill-opacity="0.6" stroke="#334155" stroke-width="1" />
+            <rect x="0" y="0" width="4" height="38" rx="2" fill="#10b981" />
+            <text x="14" y="24" font-family="sans-serif" font-size="12" font-weight="700" fill="#f1f5f9">
+              PRAT-RISOTO-COGUMELO · Risoto de Cogumelos Tr
+            </text>
+            <text x="260" y="24" font-family="sans-serif" font-size="11" fill="#94a3b8">
+              340 un | R$ 78,00
+            </text>
+            <rect x="390" y="9" width="90" height="20" rx="4" fill="#10b981" fill-opacity="0.18" stroke="#10b981" stroke-width="1" />
+            <text x="435" y="23" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle" fill="#10b981">
+              ESTRELA
+            </text>
+          </g>
+        
+          <g transform="translate(900, 530)">
+            <rect x="0" y="0" width="490" height="38" rx="6" fill="#1e293b" fill-opacity="0.6" stroke="#334155" stroke-width="1" />
+            <rect x="0" y="0" width="4" height="38" rx="2" fill="#fbbf24" />
+            <text x="14" y="24" font-family="sans-serif" font-size="12" font-weight="700" fill="#f1f5f9">
+              PRAT-SALMAO-GRELHADO · Salmão com Crosta de P
+            </text>
+            <text x="260" y="24" font-family="sans-serif" font-size="11" fill="#94a3b8">
+              120 un | R$ 89,00
+            </text>
+            <rect x="390" y="9" width="90" height="20" rx="4" fill="#fbbf24" fill-opacity="0.18" stroke="#fbbf24" stroke-width="1" />
+            <text x="435" y="23" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle" fill="#fbbf24">
+              QUEBRA_CAB
+            </text>
+          </g>
+        
+          <g transform="translate(900, 575)">
+            <rect x="0" y="0" width="490" height="38" rx="6" fill="#1e293b" fill-opacity="0.6" stroke="#334155" stroke-width="1" />
+            <rect x="0" y="0" width="4" height="38" rx="2" fill="#38bdf8" />
+            <text x="14" y="24" font-family="sans-serif" font-size="12" font-weight="700" fill="#f1f5f9">
+              PRAT-TIRAMISU · Tiramisù Clássico Ital
+            </text>
+            <text x="260" y="24" font-family="sans-serif" font-size="11" fill="#94a3b8">
+              280 un | R$ 32,00
+            </text>
+            <rect x="390" y="9" width="90" height="20" rx="4" fill="#38bdf8" fill-opacity="0.18" stroke="#38bdf8" stroke-width="1" />
+            <text x="435" y="23" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle" fill="#38bdf8">
+              BURRO_DE_C
+            </text>
+          </g>
+        
+  </g>
+
+  <!-- Rodapé de Auditoria e Integridade -->
+  <g transform="translate(50, 785)">
+    <rect width="1340" height="75" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+    <text x="24" y="28" font-family="sans-serif" font-size="12" font-weight="700" fill="#38bdf8">
+      GARANTIA DE INTEGRIDADE CONTÁBIL &amp; ARITMÉTICA
+    </text>
+    <text x="24" y="48" font-family="sans-serif" font-size="11" fill="#94a3b8">
+      • Zero float: todos os custos, preços e rateios em centavos inteiros (int) e frações exatas (Fraction).
+    </text>
+    <text x="24" y="64" font-family="sans-serif" font-size="11" fill="#94a3b8">
+      • Metodologia Kasavana &amp; Smith: limiar de popularidade a 70% da média ponderada e margem referencial contra média do mix.
+    </text>
+    <text x="1316" y="46" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="end" fill="#64748b">
+      LOFRANO TECNOLOGIA
+    </text>
+  </g>
+</svg>

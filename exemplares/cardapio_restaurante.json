@@ -1,0 +1,289 @@
+{
+  "nome_estabelecimento": "Bistrô & Trattoria Lofrano",
+  "periodo": "Outubro/2026",
+  "insumos": [
+    {
+      "codigo": "INS-FIL-MIGNON",
+      "nome": "Filé Mignon Bovino Limpo",
+      "unidade": "g",
+      "quantidade_embalagem": 1000,
+      "custo_embalagem_centavos": 7800,
+      "fator_correcao_num": 110,
+      "fator_correcao_den": 100
+    },
+    {
+      "codigo": "INS-ARROZ-ARB",
+      "nome": "Arroz Arbóreo Italiano",
+      "unidade": "g",
+      "quantidade_embalagem": 1000,
+      "custo_embalagem_centavos": 2200,
+      "fator_correcao_num": 1,
+      "fator_correcao_den": 1
+    },
+    {
+      "codigo": "INS-PARMESAO",
+      "nome": "Queijo Parmesão Grana",
+      "unidade": "g",
+      "quantidade_embalagem": 1000,
+      "custo_embalagem_centavos": 11000,
+      "fator_correcao_num": 105,
+      "fator_correcao_den": 100
+    },
+    {
+      "codigo": "INS-MANTEIGA",
+      "nome": "Manteiga Extra sem Sal",
+      "unidade": "g",
+      "quantidade_embalagem": 500,
+      "custo_embalagem_centavos": 2600,
+      "fator_correcao_num": 1,
+      "fator_correcao_den": 1
+    },
+    {
+      "codigo": "INS-COGUMELOS",
+      "nome": "Mix de Cogumelos Frescos",
+      "unidade": "g",
+      "quantidade_embalagem": 400,
+      "custo_embalagem_centavos": 2800,
+      "fator_correcao_num": 120,
+      "fator_correcao_den": 100
+    },
+    {
+      "codigo": "INS-SALMAO",
+      "nome": "Salmão Fresco em Filé",
+      "unidade": "g",
+      "quantidade_embalagem": 1000,
+      "custo_embalagem_centavos": 9500,
+      "fator_correcao_num": 115,
+      "fator_correcao_den": 100
+    },
+    {
+      "codigo": "INS-MASSA-TAL",
+      "nome": "Massa Fresca Tagliolini",
+      "unidade": "g",
+      "quantidade_embalagem": 500,
+      "custo_embalagem_centavos": 1400,
+      "fator_correcao_num": 1,
+      "fator_correcao_den": 1
+    },
+    {
+      "codigo": "INS-CREME-LEITE",
+      "nome": "Creme de Leite Fresco",
+      "unidade": "ml",
+      "quantidade_embalagem": 500,
+      "custo_embalagem_centavos": 1800,
+      "fator_correcao_num": 1,
+      "fator_correcao_den": 1
+    },
+    {
+      "codigo": "INS-MASCARPONE",
+      "nome": "Queijo Mascarpone Italiano",
+      "unidade": "g",
+      "quantidade_embalagem": 500,
+      "custo_embalagem_centavos": 4200,
+      "fator_correcao_num": 1,
+      "fator_correcao_den": 1
+    },
+    {
+      "codigo": "INS-BISCOITO-CHAMP",
+      "nome": "Biscoito Champagne",
+      "unidade": "g",
+      "quantidade_embalagem": 300,
+      "custo_embalagem_centavos": 1200,
+      "fator_correcao_num": 1,
+      "fator_correcao_den": 1
+    },
+    {
+      "codigo": "INS-CAFE-GRAOS",
+      "nome": "Café Especial em Grãos",
+      "unidade": "g",
+      "quantidade_embalagem": 1000,
+      "custo_embalagem_centavos": 8500,
+      "fator_correcao_num": 1,
+      "fator_correcao_den": 1
+    },
+    {
+      "codigo": "INS-LIMPA-TRUFA",
+      "nome": "Azeite Trufado Branco",
+      "unidade": "ml",
+      "quantidade_embalagem": 250,
+      "custo_embalagem_centavos": 8500,
+      "fator_correcao_num": 1,
+      "fator_correcao_den": 1
+    },
+    {
+      "codigo": "INS-PAO-CIABATTA",
+      "nome": "Pão Ciabatta Artesanal",
+      "unidade": "g",
+      "quantidade_embalagem": 400,
+      "custo_embalagem_centavos": 1200,
+      "fator_correcao_num": 1,
+      "fator_correcao_den": 1
+    },
+    {
+      "codigo": "INS-TOMATE-ITAL",
+      "nome": "Tomate Italiano Maduro",
+      "unidade": "g",
+      "quantidade_embalagem": 1000,
+      "custo_embalagem_centavos": 900,
+      "fator_correcao_num": 120,
+      "fator_correcao_den": 100
+    },
+    {
+      "codigo": "INS-SEMOLA-POLENTA",
+      "nome": "Sêmola de Milho para Polenta",
+      "unidade": "g",
+      "quantidade_embalagem": 1000,
+      "custo_embalagem_centavos": 800,
+      "fator_correcao_num": 1,
+      "fator_correcao_den": 1
+    }
+  ],
+  "fichas": [
+    {
+      "codigo": "PRAT-BRUSCHETTA-TOMATE",
+      "nome": "Bruschetta Tradicional de Tomate",
+      "categoria": "Entradas",
+      "rendimento_porcoes": 1,
+      "custo_embalagem_centavos": 100,
+      "preco_venda_centavos": 2400,
+      "vendas_periodo": 60,
+      "cmv_alvo_num": 25,
+      "cmv_alvo_den": 100,
+      "taxas_impostos_num": 12,
+      "taxas_impostos_den": 100,
+      "ingredientes": [
+        { "codigo_insumo": "INS-PAO-CIABATTA", "quantidade_liquida": 120 },
+        { "codigo_insumo": "INS-TOMATE-ITAL", "quantidade_liquida": 150 },
+        { "codigo_insumo": "INS-PARMESAO", "quantidade_liquida": 30 }
+      ]
+    },
+    {
+      "codigo": "PRAT-POLENTA-TRUFADA",
+      "nome": "Polenta Cremosa Trufada",
+      "categoria": "Entradas",
+      "rendimento_porcoes": 1,
+      "custo_embalagem_centavos": 100,
+      "preco_venda_centavos": 5800,
+      "vendas_periodo": 85,
+      "cmv_alvo_num": 22,
+      "cmv_alvo_den": 100,
+      "taxas_impostos_num": 12,
+      "taxas_impostos_den": 100,
+      "ingredientes": [
+        { "codigo_insumo": "INS-SEMOLA-POLENTA", "quantidade_liquida": 100 },
+        { "codigo_insumo": "INS-PARMESAO", "quantidade_liquida": 40 },
+        { "codigo_insumo": "INS-LIMPA-TRUFA", "quantidade_liquida": 10 }
+      ]
+    },
+    {
+      "codigo": "PRAT-RISOTO-COGUMELO",
+      "nome": "Risoto de Cogumelos Trufado",
+      "categoria": "Pratos Principais",
+      "rendimento_porcoes": 1,
+      "custo_embalagem_centavos": 150,
+      "preco_venda_centavos": 7800,
+      "vendas_periodo": 340,
+      "cmv_alvo_num": 28,
+      "cmv_alvo_den": 100,
+      "taxas_impostos_num": 12,
+      "taxas_impostos_den": 100,
+      "ingredientes": [
+        { "codigo_insumo": "INS-ARROZ-ARB", "quantidade_liquida": 120 },
+        { "codigo_insumo": "INS-COGUMELOS", "quantidade_liquida": 100 },
+        { "codigo_insumo": "INS-PARMESAO", "quantidade_liquida": 40 },
+        { "codigo_insumo": "INS-MANTEIGA", "quantidade_liquida": 30 },
+        { "codigo_insumo": "INS-LIMPA-TRUFA", "quantidade_liquida": 10 }
+      ]
+    },
+    {
+      "codigo": "PRAT-MIGNON-MOLHO",
+      "nome": "Medalhão de Mignon ao Poivre",
+      "categoria": "Pratos Principais",
+      "rendimento_porcoes": 1,
+      "custo_embalagem_centavos": 200,
+      "preco_venda_centavos": 9200,
+      "vendas_periodo": 410,
+      "cmv_alvo_num": 30,
+      "cmv_alvo_den": 100,
+      "taxas_impostos_num": 12,
+      "taxas_impostos_den": 100,
+      "ingredientes": [
+        { "codigo_insumo": "INS-FIL-MIGNON", "quantidade_liquida": 220 },
+        { "codigo_insumo": "INS-MANTEIGA", "quantidade_liquida": 25 },
+        { "codigo_insumo": "INS-CREME-LEITE", "quantidade_liquida": 60 }
+      ]
+    },
+    {
+      "codigo": "PRAT-SALMAO-GRELHADO",
+      "nome": "Salmão com Crosta de Parmesão",
+      "categoria": "Pratos Principais",
+      "rendimento_porcoes": 1,
+      "custo_embalagem_centavos": 200,
+      "preco_venda_centavos": 8900,
+      "vendas_periodo": 120,
+      "cmv_alvo_num": 30,
+      "cmv_alvo_den": 100,
+      "taxas_impostos_num": 12,
+      "taxas_impostos_den": 100,
+      "ingredientes": [
+        { "codigo_insumo": "INS-SALMAO", "quantidade_liquida": 200 },
+        { "codigo_insumo": "INS-PARMESAO", "quantidade_liquida": 35 },
+        { "codigo_insumo": "INS-MANTEIGA", "quantidade_liquida": 20 }
+      ]
+    },
+    {
+      "codigo": "PRAT-MASSA-TRUFA",
+      "nome": "Tagliolini na Manteiga Trufada",
+      "categoria": "Massas",
+      "rendimento_porcoes": 1,
+      "custo_embalagem_centavos": 150,
+      "preco_venda_centavos": 6200,
+      "vendas_periodo": 290,
+      "cmv_alvo_num": 25,
+      "cmv_alvo_den": 100,
+      "taxas_impostos_num": 12,
+      "taxas_impostos_den": 100,
+      "ingredientes": [
+        { "codigo_insumo": "INS-MASSA-TAL", "quantidade_liquida": 180 },
+        { "codigo_insumo": "INS-MANTEIGA", "quantidade_liquida": 40 },
+        { "codigo_insumo": "INS-PARMESAO", "quantidade_liquida": 30 },
+        { "codigo_insumo": "INS-LIMPA-TRUFA", "quantidade_liquida": 8 }
+      ]
+    },
+    {
+      "codigo": "PRAT-TIRAMISU",
+      "nome": "Tiramisù Clássico Italiano",
+      "categoria": "Sobremesas",
+      "rendimento_porcoes": 6,
+      "custo_embalagem_centavos": 300,
+      "preco_venda_centavos": 3200,
+      "vendas_periodo": 280,
+      "cmv_alvo_num": 22,
+      "cmv_alvo_den": 100,
+      "taxas_impostos_num": 12,
+      "taxas_impostos_den": 100,
+      "ingredientes": [
+        { "codigo_insumo": "INS-MASCARPONE", "quantidade_liquida": 350 },
+        { "codigo_insumo": "INS-CREME-LEITE", "quantidade_liquida": 200 },
+        { "codigo_insumo": "INS-BISCOITO-CHAMP", "quantidade_liquida": 150 },
+        { "codigo_insumo": "INS-CAFE-GRAOS", "quantidade_liquida": 40 }
+      ]
+    },
+    {
+      "codigo": "PRAT-ESPRESSO-DOSE",
+      "nome": "Café Espresso Especial",
+      "categoria": "Bebidas",
+      "rendimento_porcoes": 1,
+      "custo_embalagem_centavos": 30,
+      "preco_venda_centavos": 900,
+      "vendas_periodo": 520,
+      "cmv_alvo_num": 20,
+      "cmv_alvo_den": 100,
+      "taxas_impostos_num": 12,
+      "taxas_impostos_den": 100,
+      "ingredientes": [
+        { "codigo_insumo": "INS-CAFE-GRAOS", "quantidade_liquida": 18 }
+      ]
+    }
+  ]
+}

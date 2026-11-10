@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=69.0.0", "wheel>=0.42.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "precificacao-cardapio-cmv"
+version = "1.0.0"
+description = "Engenharia de cardápio, ficha técnica gastronômica, CMV alvo e matriz de rentabilidade (Kasavana & Smith) em centavos e frações exatas."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "Martin Lofrano / LOFRANO TECNOLOGIA", email = "martinlofranodeoliveira@users.noreply.github.com" }
+]
+requires-python = ">=3.11"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Intended Audience :: Manufacturing",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Office/Business :: Financial :: Accounting",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+]
+keywords = [
+    "engenharia-de-cardapio",
+    "ficha-tecnica",
+    "cmv",
+    "food-cost",
+    "kasavana-smith",
+    "matriz-miller",
+    "precificacao-gastronomica",
+    "restaurante",
+    "margem-contribuicao",
+    "lofrano-tecnologia",
+]
+
+[project.urls]
+Homepage = "https://github.com/martinlofranodeoliveira/precificacao-cardapio-cmv"
+Documentation = "https://github.com/martinlofranodeoliveira/precificacao-cardapio-cmv#readme"
+Repository = "https://github.com/martinlofranodeoliveira/precificacao-cardapio-cmv.git"
+Issues = "https://github.com/martinlofranodeoliveira/precificacao-cardapio-cmv/issues"
+
+[project.scripts]
+precificacao-cardapio = "precificacao_cardapio.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]

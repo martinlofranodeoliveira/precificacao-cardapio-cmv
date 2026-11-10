@@ -1,0 +1,66 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  testes:
+    name: Testes (${{ matrix.os }} / Python ${{ matrix.python-version }})
+    runs-on: ${{ matrix.os }}
+    env:
+      PYTHONIOENCODING: utf-8
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest]
+        python-version: ["3.11", "3.12", "3.13", "3.14"]
+        include:
+          - os: windows-latest
+            python-version: "3.14"
+
+    steps:
+      - name: Obter código
+        uses: actions/checkout@v4
+
+      - name: Configurar Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Executar suíte de testes unitários
+        run: |
+          python -m unittest discover -s tests -v
+
+      - name: Executar verificador independente SQLite
+        run: |
+          python tools/verify_independent.py exemplares/cardapio_restaurante.json
+
+  isolamento-e-pacote:
+    name: Empacotamento e Verificação Isolada de Rede
+    runs-on: ubuntu-latest
+    env:
+      PYTHONIOENCODING: utf-8
+    steps:
+      - name: Obter código
+        uses: actions/checkout@v4
+
+      - name: Configurar Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar ferramentas de build
+        run: pip install --upgrade pip setuptools wheel
+
+      - name: Construir wheel e sdist
+        run: python -c "import setuptools.build_meta as b; b.build_sdist('dist'); b.build_wheel('dist')"
+
+      - name: Verificar integridade do pacote fora da árvore
+        run: python scripts/check_distribution.py
+
+      - name: Testar execução CLI em rede isolada (unshare)
+        run: |
+          unshare -n python -m precificacao_cardapio --ajuda
