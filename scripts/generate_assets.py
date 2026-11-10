@@ -79,10 +79,9 @@ def main() -> int:
     if zip_path.exists():
         zip_path.unlink()
 
-    tmp_fichas_csv = Path("/tmp/fichas_temp.csv")
-    tmp_insumos_csv = Path("/tmp/insumos_temp.csv")
-    exportar_fichas_csv(analise, tmp_fichas_csv)
-    exportar_insumos_csv(cardapio, tmp_insumos_csv)
+    from precificacao_cardapio.exports import gerar_fichas_csv_str, gerar_insumos_csv_str
+    fichas_csv_bytes = gerar_fichas_csv_str(analise).encode("utf-8")
+    insumos_csv_bytes = gerar_insumos_csv_str(cardapio).encode("utf-8")
 
     analise_dict = analise_para_dict(analise)
     analise_json_bytes = serializar_json_canonico(analise_dict).encode("utf-8")
@@ -91,16 +90,12 @@ def main() -> int:
     arquivos_zip = [
         ("entrada.json", exemplar.read_bytes()),
         ("analise_cardapio.json", analise_json_bytes),
-        ("fichas_tecnicas.csv", tmp_fichas_csv.read_bytes()),
-        ("insumos.csv", tmp_insumos_csv.read_bytes()),
+        ("fichas_tecnicas.csv", fichas_csv_bytes),
+        ("insumos.csv", insumos_csv_bytes),
         ("relatorio.md", relatorio_md_bytes),
         ("painel.svg", svg_conteudo.encode("utf-8")),
     ]
     criar_pacote_zip_deterministico(zip_path, arquivos_zip)
-    if tmp_fichas_csv.exists():
-        tmp_fichas_csv.unlink()
-    if tmp_insumos_csv.exists():
-        tmp_insumos_csv.unlink()
     print(f"[OK] ZIP determinístico gerado: {zip_path}")
 
     # Copiar PNG para a pasta de release

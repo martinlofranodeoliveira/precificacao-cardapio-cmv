@@ -33,9 +33,8 @@ def centavos_para_reais_str(centavos: int) -> str:
     return f"{sinal}R$ {inteiro},{resto:02d}"
 
 
-def exportar_fichas_csv(analise: AnaliseCardapio, caminho: Union[str, Path]) -> None:
-    """Gera CSV sanitizado com a análise consolidada de cada ficha técnica."""
-    caminho_p = Path(caminho)
+def gerar_fichas_csv_str(analise: AnaliseCardapio) -> str:
+    """Gera texto CSV sanitizado com a análise consolidada de cada ficha técnica."""
     linhas: List[str] = [
         "codigo;nome;categoria;rendimento;custo_porcao;preco_venda;cmv_atual;cmv_alvo;preco_sugerido;margem_unitaria;vendas;faturamento;margem_total;quadrante;recomendacao"
     ]
@@ -64,13 +63,17 @@ def exportar_fichas_csv(analise: AnaliseCardapio, caminho: Union[str, Path]) -> 
         ]
         linhas.append(";".join(colunas))
 
-    conteudo = "\n".join(linhas) + "\n"
-    caminho_p.write_text(conteudo, encoding="utf-8")
+    return "\n".join(linhas) + "\n"
 
 
-def exportar_insumos_csv(cardapio: Cardapio, caminho: Union[str, Path]) -> None:
-    """Gera CSV sanitizado do cadastro de insumos e fatores de correção."""
+def exportar_fichas_csv(analise: AnaliseCardapio, caminho: Union[str, Path]) -> None:
+    """Gera CSV sanitizado com a análise consolidada de cada ficha técnica."""
     caminho_p = Path(caminho)
+    caminho_p.write_text(gerar_fichas_csv_str(analise), encoding="utf-8")
+
+
+def gerar_insumos_csv_str(cardapio: Cardapio) -> str:
+    """Gera texto CSV sanitizado do cadastro de insumos e fatores de correção."""
     linhas: List[str] = [
         "codigo;nome;unidade;quantidade_embalagem;custo_embalagem;fator_correcao;custo_unitario_frac"
     ]
@@ -89,8 +92,13 @@ def exportar_insumos_csv(cardapio: Cardapio, caminho: Union[str, Path]) -> None:
         ]
         linhas.append(";".join(colunas))
 
-    conteudo = "\n".join(linhas) + "\n"
-    caminho_p.write_text(conteudo, encoding="utf-8")
+    return "\n".join(linhas) + "\n"
+
+
+def exportar_insumos_csv(cardapio: Cardapio, caminho: Union[str, Path]) -> None:
+    """Gera CSV sanitizado do cadastro de insumos e fatores de correção."""
+    caminho_p = Path(caminho)
+    caminho_p.write_text(gerar_insumos_csv_str(cardapio), encoding="utf-8")
 
 
 def gerar_relatorio_markdown(analise: AnaliseCardapio) -> str:

@@ -21,6 +21,8 @@ from .exports import (
     criar_pacote_zip_deterministico,
     exportar_fichas_csv,
     exportar_insumos_csv,
+    gerar_fichas_csv_str,
+    gerar_insumos_csv_str,
     gerar_relatorio_markdown,
 )
 from .menu_matrix import classificar_cardapio
@@ -393,24 +395,18 @@ def executar_analise(
 
         # Salvar pacote ZIP se solicitado
         if saida_zip:
-            tmp_fichas_csv = Path("/tmp/fichas_tmp.csv")
-            tmp_insumos_csv = Path("/tmp/insumos_tmp.csv")
-            exportar_fichas_csv(analise, tmp_fichas_csv)
-            exportar_insumos_csv(cardapio, tmp_insumos_csv)
+            fichas_csv_bytes = gerar_fichas_csv_str(analise).encode("utf-8")
+            insumos_csv_bytes = gerar_insumos_csv_str(cardapio).encode("utf-8")
 
             arquivos_zip = [
                 ("entrada.json", caminho_entrada.read_bytes()),
                 ("analise_cardapio.json", analise_json_bytes),
-                ("fichas_tecnicas.csv", tmp_fichas_csv.read_bytes()),
-                ("insumos.csv", tmp_insumos_csv.read_bytes()),
+                ("fichas_tecnicas.csv", fichas_csv_bytes),
+                ("insumos.csv", insumos_csv_bytes),
                 ("relatorio.md", relatorio_md_bytes),
                 ("painel.svg", painel_svg_bytes),
             ]
             criar_pacote_zip_deterministico(saida_zip, arquivos_zip)
-            if tmp_fichas_csv.exists():
-                tmp_fichas_csv.unlink()
-            if tmp_insumos_csv.exists():
-                tmp_insumos_csv.unlink()
             print(f"Pacote ZIP determinístico gerado: {saida_zip.resolve()}")
 
         return 0
