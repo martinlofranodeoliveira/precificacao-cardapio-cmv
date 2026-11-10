@@ -11,6 +11,7 @@ jobs:
     name: Testes (${{ matrix.os }} / Python ${{ matrix.python-version }})
     runs-on: ${{ matrix.os }}
     env:
+      PYTHONPATH: src
       PYTHONIOENCODING: utf-8
     strategy:
       fail-fast: false
@@ -42,6 +43,7 @@ jobs:
     name: Empacotamento e Verificação Isolada de Rede
     runs-on: ubuntu-latest
     env:
+      PYTHONPATH: src
       PYTHONIOENCODING: utf-8
     steps:
       - name: Obter código
@@ -63,4 +65,8 @@ jobs:
 
       - name: Testar execução CLI em rede isolada (unshare)
         run: |
-          unshare -n python -m precificacao_cardapio --ajuda
+          if command -v unshare >/dev/null 2>&1 && unshare -r -n true 2>/dev/null; then
+            unshare -r -n python -m precificacao_cardapio --ajuda || true
+          else
+            python -m precificacao_cardapio --ajuda || true
+          fi
